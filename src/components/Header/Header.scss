@@ -25,3 +25,18 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    &-menu {
+      &-list {
+        gap: 20px;
+      }
+    }
+    &-actions {
+      &-list {
+        gap: 15px;
+      }
+    }
+  }
+}
