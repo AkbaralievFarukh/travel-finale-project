@@ -1,0 +1,27 @@
+.header {
+  padding: 40px 0;
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+  }
+  &-actions {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+}

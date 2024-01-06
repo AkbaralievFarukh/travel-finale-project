@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700;800&display=swap');
+
+$Main-Text-Color: #2C2C2C;
+$Secondary-Text-Color: #A79997;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Serif', serif;
+  color: $Main-Text-Color;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1680px;
+  width: 100%;
+  margin: 0 auto;
+}
