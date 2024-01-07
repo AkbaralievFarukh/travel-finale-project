@@ -91,3 +91,19 @@
     }
   }
 }
+
+@media screen and (max-width: 425px) {
+  .slide {
+    &-container {
+      max-width: 304px;
+    }
+    &-title {
+      font-size: 36px;
+      line-height: 54px; /* 66.666% */
+    }
+    &-button {
+      font-size: 12px;
+      padding: 12px 24px;
+    }
+  }
+}
