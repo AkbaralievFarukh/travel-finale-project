@@ -11,36 +11,38 @@ import { Navigation } from 'swiper/modules';
 
 const Hero = () => {
     return (
-        <>
-            <Swiper navigation={false} modules={[Navigation]} className="mySwiper">
-                <SwiperSlide>
-                    <div className="slide-container">
-                        <div className="slide-content">
-                            <h1 className="slide-title">
-                                It’s Time To
-                                Explore The World
-                            </h1>
-                            <button className="slide-button">
-                                Plan Your Trip
-                            </button>
+        <section className={"hero"}>
+            <div className="container">
+                <Swiper navigation={false} modules={[Navigation]} className="mySwiper">
+                    <SwiperSlide>
+                        <div className="slide-container">
+                            <div className="slide-content">
+                                <h1 className="slide-title">
+                                    It’s Time To
+                                    Explore The World
+                                </h1>
+                                <button className="slide-button">
+                                    Plan Your Trip
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="slide-container">
-                        <div className="slide-content">
-                            <h1 className="slide-title">
-                                It’s Time To
-                                Explore The World
-                            </h1>
-                            <button className="slide-button">
-                                Plan Your Trip
-                            </button>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="slide-container">
+                            <div className="slide-content">
+                                <h1 className="slide-title">
+                                    It’s Time To
+                                    Explore The World
+                                </h1>
+                                <button className="slide-button">
+                                    Plan Your Trip
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+        </section>
     );
 };
 
