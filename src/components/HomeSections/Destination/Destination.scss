@@ -1,0 +1,35 @@
+// Стили для блока destination
+.destination {
+  &__future {
+    max-width: 1410px;
+    width: 100%;
+    margin: 0 auto;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 45px 55px 60px 55px;
+      background: #F8F8F8;
+      &__img {
+        text-align: center;
+        width: 100%;
+      }
+      &__text {
+        text-align: center;
+        & h3 {
+          color: #2C2C2C;
+          font-size: 24px;
+          font-weight: 700;
+        }
+        & p {
+          color: #A79997;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 26px; /* 144.444% */
+        }
+      }
+    }
+  }
+}
