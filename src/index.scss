@@ -29,6 +29,10 @@ ul {
   margin: 0 auto;
 }
 
+.menu-open {
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1440px) {
   .container {
     padding: 0 20px;

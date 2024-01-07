@@ -4,7 +4,10 @@ import './Header.scss';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+    const toggle = () => {
+        setIsOpen(!isOpen)
+        document.body.classList.toggle('menu-open', !isOpen);
+    };
     return (
         <header className={"header"}>
             <div className="container">
@@ -25,16 +28,16 @@ const Header = () => {
                     <nav className={`header-menu ${isOpen ? "active" : ""}`}>
                         <ul className={"header-menu-list"}>
                             <li className={"header-menu-item"}>
-                                <Link to={"/"} className={"header-menu-link"}>Home</Link>
+                                <Link to={"/"} className={"header-menu-link"} onClick={toggle}>Home</Link>
                             </li>
                             <li className={"header-menu-item"}>
-                                <Link to={"/"} className={"header-menu-link"}>About</Link>
+                                <Link to={"/"} className={"header-menu-link"} onClick={toggle}>About</Link>
                             </li>
                             <li className={"header-menu-item"}>
-                                <Link to={"/"} className={"header-menu-link"}>Contact</Link>
+                                <Link to={"/"} className={"header-menu-link"} onClick={toggle}>Contact</Link>
                             </li>
                             <li className={"header-menu-item"}>
-                                <Link to={"/"} className={"header-menu-link"}>Blog</Link>
+                                <Link to={"/"} className={"header-menu-link"} onClick={toggle}>Blog</Link>
                             </li>
                         </ul>
                     </nav>
