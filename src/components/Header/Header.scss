@@ -1,5 +1,11 @@
 .header {
   padding: 40px 0;
+  &-logo {
+    & a {
+      display: flex;
+      align-items: center;
+    }
+  }
   &-content {
     display: flex;
     align-items: center;
@@ -23,19 +29,61 @@
       align-items: center;
       gap: 10px;
     }
+    &__burger {
+      display: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .header {
     &-menu {
+      position: fixed;
+      top: 0;
+      left: -225px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 220px;
+      height: 100%;
+      background: #FFF;
+      z-index: 10;
+      border: 2px solid #FF715B;
+      border-top-right-radius: 16px;
+      border-bottom-right-radius: 16px;
+      transition: all 0.2s linear;
+      &.active {
+        transform: translateX(100%);
+      }
       &-list {
-        gap: 20px;
+        flex-direction: column;
+        gap: 40px;
+        z-index: 1;
+      }
+      &-link {
+        font-weight: 500;
       }
     }
     &-actions {
       &-list {
         gap: 15px;
+      }
+      &__burger {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header {
+    &-actions {
+      &-list {
+        gap: 10px;
       }
     }
   }

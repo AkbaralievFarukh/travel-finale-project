@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import './Header.scss';
 
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
     return (
         <header className={"header"}>
             <div className="container">
@@ -20,7 +22,7 @@ const Header = () => {
                             </svg>
                         </Link>
                     </div>
-                    <div className={"header-menu"}>
+                    <nav className={`header-menu ${isOpen ? "active" : ""}`}>
                         <ul className={"header-menu-list"}>
                             <li className={"header-menu-item"}>
                                 <Link to={"/"} className={"header-menu-link"}>Home</Link>
@@ -35,7 +37,7 @@ const Header = () => {
                                 <Link to={"/"} className={"header-menu-link"}>Blog</Link>
                             </li>
                         </ul>
-                    </div>
+                    </nav>
                     <div className={"header-actions"}>
                         <ul className={"header-actions-list"}>
                             <li className={"header-actions-item"}>
@@ -49,7 +51,6 @@ const Header = () => {
                                             d="M18.2503 21.5H1.75035C1.30035 21.5 0.897224 21.3124 0.615974 20.9796C0.311286 20.614 0.189411 20.1171 0.278473 19.6156C0.672223 17.4218 1.90972 15.575 3.85035 14.2859C5.57535 13.1375 7.75972 12.5046 10.0003 12.5046C12.241 12.5046 14.4253 13.1375 16.1503 14.2859C18.091 15.5796 19.3285 17.4218 19.7222 19.6156C19.8113 20.1171 19.6894 20.614 19.3847 20.9796C19.1035 21.3124 18.7003 21.5 18.2503 21.5ZM1.75972 20H18.241C18.2503 19.9765 18.255 19.939 18.2457 19.8781C17.5191 15.8421 13.4597 14 10.0003 14C6.54097 14 2.4816 15.8421 1.75504 19.8781C1.74566 19.939 1.75035 19.9765 1.75972 20Z"
                                             fill="#0F172A"/>
                                     </svg>
-                                    Login
                                 </Link>
                             </li>
                             <li className={"header-actions-item"}>
@@ -70,6 +71,22 @@ const Header = () => {
                                               fill="#0F172A"/>
                                     </svg>
                                 </Link>
+                            </li>
+                            <li className={"header-actions-item"}>
+                                <button className={"header-actions__burger"} onClick={toggle}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+                                         fill="none">
+                                        <path fillRule="evenodd" clipRule="evenodd"
+                                              d="M3 7.5C3 7.08579 3.33579 6.75 3.75 6.75H20.25C20.6642 6.75 21 7.08579 21 7.5C21 7.91421 20.6642 8.25 20.25 8.25H3.75C3.33579 8.25 3 7.91421 3 7.5Z"
+                                              fill="#0F172A"/>
+                                        <path fillRule="evenodd" clipRule="evenodd"
+                                              d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z"
+                                              fill="#0F172A"/>
+                                        <path fillRule="evenodd" clipRule="evenodd"
+                                              d="M3 16.5C3 16.0858 3.33579 15.75 3.75 15.75H20.25C20.6642 15.75 21 16.0858 21 16.5C21 16.9142 20.6642 17.25 20.25 17.25H3.75C3.33579 17.25 3 16.9142 3 16.5Z"
+                                              fill="#0F172A"/>
+                                    </svg>
+                                </button>
                             </li>
                         </ul>
                     </div>
