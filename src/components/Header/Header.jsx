@@ -13,6 +13,7 @@ const Header = () => {
         setIsMobile(window.innerWidth <= 768)
     }
     useEffect(() => {
+        checkMobile()
         window.addEventListener('resize', checkMobile)
         return () => window.removeEventListener('resize', checkMobile)
     }, [])
