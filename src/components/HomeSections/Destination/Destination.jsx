@@ -17,45 +17,49 @@ const Destination = () => {
                                     <img src={Map} alt={"Map illustration"}/>
                                 </div>
                                 <div className={"destination__future__item__text"}>
-                                    <h3>Future</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod,
-                                        quaerat, quasi, quibusdam, quidem, quod, quaerat.</p>
+                                    <h3>Choose Destination</h3>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing setting
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div className={"col-3"}>
                             <div className={"destination__future__item"}>
                                 <div className={"destination__future__item__img"}>
-                                    <img src={Map} alt={"Map illustration"}/>
+                                    <img src={Binocular} alt={"Map illustration"}/>
                                 </div>
                                 <div className={"destination__future__item__text"}>
-                                    <h3>Future</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod,
-                                        quaerat, quasi, quibusdam, quidem, quod, quaerat.</p>
+                                    <h3>Explore The Place</h3>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing setting
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div className={"col-3"}>
                             <div className={"destination__future__item"}>
                                 <div className={"destination__future__item__img"}>
-                                    <img src={Map} alt={"Map illustration"}/>
+                                    <img src={Backpack} alt={"Map illustration"}/>
                                 </div>
                                 <div className={"destination__future__item__text"}>
-                                    <h3>Future</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod,
-                                        quaerat, quasi, quibusdam, quidem, quod, quaerat.</p>
+                                    <h3>Start Your Journey</h3>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing setting
+                                    </p>
                                 </div>
                             </div>
                         </div>
                         <div className={"col-3"}>
                             <div className={"destination__future__item"}>
                                 <div className={"destination__future__item__img"}>
-                                    <img src={Map} alt={"Map illustration"}/>
+                                    <img src={Ukulele} alt={"Map illustration"}/>
                                 </div>
                                 <div className={"destination__future__item__text"}>
-                                    <h3>Future</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quod,
-                                        quaerat, quasi, quibusdam, quidem, quod, quaerat.</p>
+                                    <h3>Let’s Enjoy</h3>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text of the printing setting
+                                    </p>
                                 </div>
                             </div>
                         </div>
