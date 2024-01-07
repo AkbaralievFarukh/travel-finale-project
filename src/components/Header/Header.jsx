@@ -1,13 +1,26 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import './Header.scss';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const toggle = () => {
         setIsOpen(!isOpen)
         document.body.classList.toggle('menu-open', !isOpen);
     };
+    const checkMobile = () => {
+        setIsMobile(window.innerWidth <= 768)
+    }
+    useEffect(() => {
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+    const handleClick = () => {
+        if (isMobile) {
+            toggle()
+        }
+    }
     return (
         <header className={"header"}>
             <div className="container">
@@ -28,16 +41,16 @@ const Header = () => {
                     <nav className={`header-menu ${isOpen ? "active" : ""}`}>
                         <ul className={"header-menu-list"}>
                             <li className={"header-menu-item"}>
-                                <Link to={"/"} className={"header-menu-link"} onClick={toggle}>Home</Link>
+                                <Link to={"/"} className={"header-menu-link"} onClick={handleClick}>Destination</Link>
                             </li>
                             <li className={"header-menu-item"}>
-                                <Link to={"/"} className={"header-menu-link"} onClick={toggle}>About</Link>
+                                <Link to={"/"} className={"header-menu-link"} onClick={handleClick}>Offer</Link>
                             </li>
                             <li className={"header-menu-item"}>
-                                <Link to={"/"} className={"header-menu-link"} onClick={toggle}>Contact</Link>
+                                <Link to={"/"} className={"header-menu-link"} onClick={handleClick}>Tour</Link>
                             </li>
                             <li className={"header-menu-item"}>
-                                <Link to={"/"} className={"header-menu-link"} onClick={toggle}>Blog</Link>
+                                <Link to={"/"} className={"header-menu-link"} onClick={handleClick}>Blog</Link>
                             </li>
                         </ul>
                     </nav>
@@ -76,7 +89,7 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className={"header-actions-item"}>
-                                <button className={"header-actions__burger"} onClick={toggle}>
+                                <button className={"header-actions__burger"} onClick={handleClick}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
                                          fill="none">
                                         <path fillRule="evenodd" clipRule="evenodd"
